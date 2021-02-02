@@ -1,4 +1,5 @@
-﻿
+﻿Import-module -name "C:\Program Files\Veeam\Backup and Replication\Console\Veeam.Backup.PowerShell\Veeam.Backup.PowerShell.psd1"
+
 #This will check the Veeam service has started and is running 
 
 $svc = Get-Service VeeamBackupSvc

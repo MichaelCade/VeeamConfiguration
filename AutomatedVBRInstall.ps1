@@ -23,11 +23,9 @@ net use v: "\\10.0.0.2\share\CADE\Scripts\BR-UnattendedInstall-v10" /user:APLABS
 Powershell.exe -file V:\MountVBR_ISO.ps1
 
 Powershell.exe -Command V:\Install_Veeam.ps1 -InstallOption VBRServerInstall
+
+
 Write-Progress -Activity "Import Module" 
-Start-Sleep -s 600
-
-Import-Module Veeam.Backup.PowerShell
-
-Get-VBRserver
+Import-module -name "C:\Program Files\Veeam\Backup and Replication\Console\Veeam.Backup.PowerShell\Veeam.Backup.PowerShell.psd1"
 
 Powershell.exe -file V:\VeeamConfiguration.ps1
