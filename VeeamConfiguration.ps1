@@ -1,8 +1,10 @@
-﻿#This will check the Veeam service has started and is running 
+﻿
+#This will check the Veeam service has started and is running 
 
 $svc = Get-Service VeeamBackupSvc
 $svc.WaitForStatus('Running')
 Write-Progress -Activity "Waiting for Veeam services to start"
+
  
 #XFSRepo_name = "TPM04-VBR-XFS-Rep01"
 #XFSRepo_IP = "10.0.40.123"
@@ -63,7 +65,7 @@ Find-VBRViEntity -Name TPM04-CENTOS-01 | Add-VBRViBackupJob -Name "VMware - Web 
 #Create NAS Backup job 
 $NASserver = Get-VBRNASServer -Name "\\dc1\share\cade"
 $NASobject = New-VBRNASBackupJobObject -Server $NASserver -Path "\\dc1\share\cade"
-Add-VBRNASBackupJob -BackupObject $NASobject -ShortTermBackupRepository $repository -Name "NAS Backup Job" -Description "Automated VMware Web Server Backup" -
+Add-VBRNASBackupJob -BackupObject $NASobject -ShortTermBackupRepository $repository -Name "NAS Backup Job" -Description "Automated VMware Web Server Backup"
 
 #Create Virtual Lab 
 #Create Application Group 

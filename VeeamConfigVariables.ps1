@@ -3,16 +3,16 @@
 #Paths
 [string]$Script:InstallSource = 'D:\' #No trailing slash required
 [string]$Script:InstallLogDir = 'C:\InstallLogs' #No trailing slash required
-[string]$Script:LicenseFile = '\\dc1\share\Veeam\B & R\v11 RC\license-main-1000.RC1.lic'
+[string]$Script:LicenseFile = 'P:\license-main-1000.RC1.lic'
 
 #Remote vs. local SQL
 [bool]$Script:UseRemoteSQL = $false
 
 #User account
-#[string]$Script:User_Account_Type = 'Local'
-[string]$Script:User_Account_Type = 'Domain'
+[string]$Script:User_Account_Type = 'Local'
+#[string]$Script:User_Account_Type = 'Domain'
 
-[string]$Script:All_Service_Username = 'admin-michaelcade'
+[string]$Script:All_Service_Username = 'veeam_svc'
 [string]$Script:All_Service_Password = 'Veeam123!'
 
 
